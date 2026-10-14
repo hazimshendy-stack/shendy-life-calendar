@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>SHENDY LIFE CALENDAR</title>
+<meta name="description" content="تقويم أسبوعي شخصي ثابت يتكرر كل أسبوع: الله، الصحة، الإدارة، العلم، العمل، الكلية، المشاريع." />
+<meta name="theme-color" content="#111111" />
+<meta name="color-scheme" content="light" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+<link rel="apple-touch-icon" href="./assets/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="SHENDY LIFE" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="app-header">
+  <div class="wrap app-header__inner">
+    <div class="brand">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+          <path d="M3.5 10h17M8 3.5v3M16 3.5v3" />
+        </svg>
+      </span>
+      <span class="brand__text">
+        <span class="brand__name">SHENDY LIFE CALENDAR</span>
+        <span class="brand__tag">تقويم أسبوعي ثابت يتكرر كل أسبوع</span>
+      </span>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="btn btn--ghost" id="timesToggle" aria-pressed="true">الأوقات المقترحة: ظاهرة</button>
+      <button type="button" class="btn" id="installBtn" hidden>تثبيت التطبيق</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap main">
+  <section class="panel" id="pillarsSummary" aria-labelledby="pillars-title"></section>
+  <section class="panel" id="cycleControl" aria-labelledby="cycle-title"></section>
+
+  <h2 class="section-title" id="days-title">الأسبوع الثابت</h2>
+  <nav class="day-strip" id="dayStrip" aria-label="اختيار اليوم"></nav>
+  <div class="week-grid" id="weekGrid" aria-labelledby="days-title"></div>
+
+  <section class="panel" id="legend" aria-labelledby="legend-title"></section>
+</main>
+
+<footer class="app-footer">
+  <div class="wrap">
+    <p>تقويم ثابت بلا تواريخ حيّة ولا Backend ولا تتبّع. البيانات مصدرها ملفا الجدول المرجعيان.</p>
+    <p class="app-footer__muted">عدّل الجدول يدويًا في <bdi dir="ltr">schedule-data.js</bdi> — راجع <bdi dir="ltr">DOCUMENTATION.md</bdi>.</p>
+  </div>
+</footer>
+
+<script src="./schedule-data.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
